@@ -1,0 +1,74 @@
+[
+    {
+        "title": "For the First Time",
+        "artist": "The Script",
+        "year": 2010,
+        "genres": ["Pop Rock"]
+    },
+    {
+        "title": "Nothing",
+        "artist": "The Script",
+        "year": 2010,
+        "genres": ["Pop Rock"]
+    },
+    {
+        "title": "Breakeven",
+        "artist": "The Script",
+        "year": 2008,
+        "genres": ["Pop Rock"]
+    },
+    {
+        "title": "The Scientist",
+        "artist": "Coldplay",
+        "year": 2002,
+        "genres": ["Alternative Rock"]
+    },
+    {
+        "title": "A Sky Full of Stars",
+        "artist": "Coldplay",
+        "year": 2014,
+        "genres": ["Alternative Rock", "Progressive House"]
+    },
+    {
+        "title": "Viva La Vida",
+        "artist": "Coldplay",
+        "year": 2008,
+        "genres": ["Pop Rock"]
+    },
+    {
+        "title": "Easy On Me",
+        "artist": "Adele",
+        "year": 2021,
+        "genres": ["Pop"]
+    },
+    {
+        "title": "When We Were Young",
+        "artist": "Adele",
+        "year": 2016,
+        "genres": ["Soul", "Pop"]
+    },
+    {
+        "title": "Someone like You",
+        "artist": "Adele",
+        "year": 2011,
+        "genres": ["Pop"]
+    },
+    {
+        "title": "Waiting for Love",
+        "artist": "Avicii",
+        "year": 2015,
+        "genres": ["Progressive House"]
+    },
+    {
+        "title": "The Nights",
+        "artist": "Avicii",
+        "year": 2014,
+        "genres": ["Progressive House"]
+    },
+    {
+        "title": "The Days",
+        "artist": "Avicii",
+        "year": 2014,
+        "genres": ["Progressive House", "Soul"]
+    }
+]

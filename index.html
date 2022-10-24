@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+<title>Songlist</title>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"> 
+</script>
+</head>
+
+<body>
+
+<script>
+  $.getJSON('songlist.json', function(data) {
+    console.log(JSON.stringify(data));
+			
+  });
+
+</script>
+
+</body>
+</html>
