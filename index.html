@@ -12,9 +12,10 @@
 <body>
 
 <script>
-  $.getJSON('songlist.json', function(data) {
-    console.log(JSON.stringify(data));
-			
+  $.getJSON('songlist.json', data => {
+    data.forEach(song => { 
+      println(song);
+    })
   });
 
 </script>
