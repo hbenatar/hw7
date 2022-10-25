@@ -14,7 +14,14 @@
 <script>
   $.getJSON('songlist.json', data => {
     data.forEach(song => { 
-      document.writeln(song);
+      document.write(song.title + "<br />");
+      document.write(song.artist + "<br />");
+      document.write("Release Year: " + song.year + "<br />");
+      document.write("Genres: ");
+      song.genres.forEach((genre, index) =>  {
+        if (index + 1 == song.genres.length) document.write(genre + "<br />");
+        else document.write(genre + " - ");
+      })
     })
   });
 
