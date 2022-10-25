@@ -39,10 +39,10 @@
     displaySongs();
   });
 
-
+  
   function displaySongs() {
     genre = document.filter.genres.value;
-    songshtml = "";
+    songshtml = "<tr><th>TITLE</th><th>ARTIST</th><th>GENRE</th><th>RELEASE YEAR</th></tr>";
 
     // filter songs by genre and display in user friendly manner
     jsonSongList.forEach(song => { 
@@ -50,21 +50,49 @@
       // doesn't have the selected genre
       if (genre != "All" && !song.genres.includes(genre)) return;
       
-      songshtml += song.title + "<br />";
-      songshtml += song.artist + "<br />";
-      songshtml += "Release Year: " + song.year + "<br />";
-      songshtml += "Genres: ";
+      songshtml += "<tr><td>" + song.title + "</td>";
+      songshtml += "<td>" + song.artist + "</td>";
+      songshtml += "<td>" + song.year + "</td>";
+      songshtml += "<td>" + song.year + "</td>";
+      songshtml += "<td>";
 
       song.genres.forEach((genre, index) =>  {
-        if (index + 1 == song.genres.length) songshtml += genre + "<br />";
+        if (index + 1 == song.genres.length) songshtml += genre;
         else songshtml += genre + ", ";
       })
-      songshtml += "<br />"
+      songshtml += "</td></tr>"
     })
 
     // add list of songs to "songs" div
     document.getElementById("songs").innerHTML = songshtml;
   }
+
+  // function displaySongs() {
+  //   genre = document.filter.genres.value;
+  //   songshtml = "";
+
+  //   // filter songs by genre and display in user friendly manner
+  //   jsonSongList.forEach(song => { 
+  //     // skip current song if there is a genre filter applied and the song 
+  //     // doesn't have the selected genre
+  //     if (genre != "All" && !song.genres.includes(genre)) return;
+      
+  //     songshtml += song.title + "<br />";
+  //     songshtml += song.artist + "<br />";
+  //     songshtml += "Release Year: " + song.year + "<br />";
+  //     songshtml += "Genres: ";
+
+  //     song.genres.forEach((genre, index) =>  {
+  //       if (index + 1 == song.genres.length) songshtml += genre + "<br />";
+  //       else songshtml += genre + ", ";
+  //     })
+  //     songshtml += "<br />"
+  //   })
+
+  //   // add list of songs to "songs" div
+  //   document.getElementById("songs").innerHTML = songshtml;
+  // }
+
 </script>
 
 <form name="filter">
@@ -73,7 +101,11 @@
 </form>
 
 <br />
-<div id="songs"></div>
+<!-- <div id="songs"> -->
+  <table id="songs">
+    
+  </table>
+<!-- </div> -->
 
 </body>
 </html>
