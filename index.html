@@ -42,7 +42,7 @@
   
   function displaySongs() {
     genre = document.filter.genres.value;
-    songshtml = "<tr><th>TITLE</th><th>ARTIST</th><th>GENRE</th><th>RELEASE YEAR</th></tr>";
+    songshtml = "<tr><th>TITLE</th><th>ARTIST</th><th>RELEASE YEAR</th><th>GENRE</th></tr>";
 
     // filter songs by genre and display in user friendly manner
     jsonSongList.forEach(song => { 
@@ -52,7 +52,6 @@
       
       songshtml += "<tr><td>" + song.title + "</td>";
       songshtml += "<td>" + song.artist + "</td>";
-      songshtml += "<td>" + song.year + "</td>";
       songshtml += "<td>" + song.year + "</td>";
       songshtml += "<td>";
 
