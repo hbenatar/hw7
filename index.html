@@ -16,7 +16,7 @@
   jsonSongList = [];
 
   $.getJSON('songlist.json', data => {
-    genreshtml = "<option value='' selected disabled hidden>Genre</option>";
+    genreshtml = "<option value='All' selected>All Genres</option>";
     genres = [];
 
     // save json data
@@ -48,7 +48,7 @@
     jsonSongList.forEach(song => { 
       // skip current song if there is a genre filter applied and the song 
       // doesn't have the selected genre
-      if (genre != "" && !song.genres.includes(genre)) return;
+      if (genre != "All" && !song.genres.includes(genre)) return;
       
       songshtml += song.title + "<br />";
       songshtml += song.artist + "<br />";
