@@ -14,23 +14,40 @@
 <script>
 
   $.getJSON('songlist.json', data => {
-    html = "";
+    songshtml = "";
+    genreshtml = "";
+    genres = [];
+
     data.forEach(song => { 
-      html += song.title + "<br />";
-      html += song.artist + "<br />";
-      html += "Release Year: " + song.year + "<br />";
-      html += "Genres: ";
+      songshtml += song.title + "<br />";
+      songshtml += song.artist + "<br />";
+      songshtml += "Release Year: " + song.year + "<br />";
+      songshtml += "Genres: ";
       song.genres.forEach((genre, index) =>  {
-        if (index + 1 == song.genres.length) html += genre + "<br />";
-        else html += genre + " - ";
+        if (!genres.includes(genre)) genres.push(genre);
+        if (index + 1 == song.genres.length) songshtml += genre + "<br />";
+        else songshtml += genre + ", ";
       })
-      html += "<br />"
+      songshtml += "<br />"
     })
 
-    document.getElementById("songs").innerHTML = html;
+    genres.forEach(genre => {
+      genreshtml += "<option value='" + genre + "'>" + genre + "</option>";
+    })
+
+    // add list of songs to "songs" div
+    document.getElementById("songs").innerHTML = songshtml;
+
+    // add genre options to select in form
+    document.getElementById("genres").innerHTML = genreshtml;
   });
 
 </script>
+
+<form>
+  <select id="genres"></select>
+  <input type="button" id="submit" value="Filter">
+</form>
 
 <div id="songs"></div>
 
