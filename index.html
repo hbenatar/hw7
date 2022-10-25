@@ -12,20 +12,27 @@
 <body>
 
 <script>
+
   $.getJSON('songlist.json', data => {
+    html = "";
     data.forEach(song => { 
-      document.write(song.title + "<br />");
-      document.write(song.artist + "<br />");
-      document.write("Release Year: " + song.year + "<br />");
-      document.write("Genres: ");
+      html += song.title + "<br />";
+      html += song.artist + "<br />";
+      html += "Release Year: " + song.year + "<br />";
+      html += "Genres: ";
       song.genres.forEach((genre, index) =>  {
-        if (index + 1 == song.genres.length) document.write(genre + "<br />");
-        else document.write(genre + " - ");
+        if (index + 1 == song.genres.length) html += genre + "<br />";
+        else html += genre + " - ";
       })
+      html += "<br />"
     })
+
+    document.getElementById("songs").innerHTML = html;
   });
 
 </script>
+
+<div id="songs"></div>
 
 </body>
 </html>
