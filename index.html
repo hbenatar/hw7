@@ -11,6 +11,8 @@
 <style>
   body {
     font-family: 'Trebuchet MS';
+    text-align: center;
+    margin: 0 auto;
   }
   table {
     width: 50%;
@@ -26,9 +28,9 @@
   tr:not(:first-child) {
     border-top: 1px solid #000000;
   }
-  th {
+  /* th {
     padding: 10px 10px;
-  }
+  } */
 </style>
 </head>
 
@@ -62,7 +64,7 @@
     displaySongs();
   });
 
-  
+  // this function displays all songs depending on the selected genre filter
   function displaySongs() {
     genre = document.filter.genres.value;
     songshtml = "<tr><th>TITLE</th><th>ARTIST</th><th>YEAR</th><th>GENRE</th></tr>";
@@ -88,32 +90,6 @@
     // add list of songs to "songs" div
     document.getElementById("songs").innerHTML = songshtml;
   }
-
-  // function displaySongs() {
-  //   genre = document.filter.genres.value;
-  //   songshtml = "";
-
-  //   // filter songs by genre and display in user friendly manner
-  //   jsonSongList.forEach(song => { 
-  //     // skip current song if there is a genre filter applied and the song 
-  //     // doesn't have the selected genre
-  //     if (genre != "All" && !song.genres.includes(genre)) return;
-      
-  //     songshtml += song.title + "<br />";
-  //     songshtml += song.artist + "<br />";
-  //     songshtml += "Release Year: " + song.year + "<br />";
-  //     songshtml += "Genres: ";
-
-  //     song.genres.forEach((genre, index) =>  {
-  //       if (index + 1 == song.genres.length) songshtml += genre + "<br />";
-  //       else songshtml += genre + ", ";
-  //     })
-  //     songshtml += "<br />"
-  //   })
-
-  //   // add list of songs to "songs" div
-  //   document.getElementById("songs").innerHTML = songshtml;
-  // }
 
 </script>
 
