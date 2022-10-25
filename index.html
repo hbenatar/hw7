@@ -7,6 +7,16 @@
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"> 
 </script>
+
+<style>
+  table {
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #919090;
+    color: #fff;
+    border-radius: 10px;
+  }
+</style>
 </head>
 
 <body>
@@ -42,7 +52,7 @@
   
   function displaySongs() {
     genre = document.filter.genres.value;
-    songshtml = "<tr><th>TITLE</th><th>ARTIST</th><th>RELEASE YEAR</th><th>GENRE</th></tr>";
+    songshtml = "<tr><th>TITLE</th><th>ARTIST</th><th>YEAR</th><th>GENRE</th></tr>";
 
     // filter songs by genre and display in user friendly manner
     jsonSongList.forEach(song => { 
