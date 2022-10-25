@@ -15,7 +15,7 @@
 
   $.getJSON('songlist.json', data => {
     songshtml = "";
-    genreshtml = "";
+    genreshtml = "<option value='' selected disabled hidden>Genre</option>";
     genres = [];
 
     data.forEach(song => { 
@@ -31,6 +31,7 @@
       songshtml += "<br />"
     })
 
+    genres.sort();
     genres.forEach(genre => {
       genreshtml += "<option value='" + genre + "'>" + genre + "</option>";
     })
